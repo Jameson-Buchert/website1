@@ -1,0 +1,331 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+
+}
+
+body {
+  background-color: black;
+  color: white;
+  
+}
+
+
+nav {
+  background-color: beige;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  word-spacing: 500px;
+  justify-content: center;
+  
+}
+
+nav a{
+  position: relative;
+  padding: 6px 30px;
+  font-size: xx-large;
+  font-weight: 900;
+  color: black;
+  text-decoration: none;
+
+}
+
+nav a::before,
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 30px;
+  bottom: 0;
+  width: 0px;
+  height: 2px;
+  background-color: black;
+  transition: width 0.5s ease;
+
+}
+
+nav a::before {
+  top: -3px;
+
+}
+
+nav a::after {
+  bottom: -3px;
+}
+
+nav a:hover::before, 
+nav a:hover::after {
+  width: calc(100% - 60px);
+  text-decoration: underline;
+}
+
+.start {
+  background-color: #0b2740;
+  color: white;
+  padding: 30px;
+}
+
+.start h1{
+  padding: 15px;
+  text-decoration: underline;
+  font-size-adjust: 100%;
+}
+
+.start p {
+  font-size: x-large;
+}
+
+
+.start button{
+  font-size: x-large;
+  border-radius: 5px;
+  transition: transform 0.3 ease;
+  padding: 5px;
+  margin: 15px;
+}
+
+.start button:hover{
+  transform: scale(1.10);
+}
+
+
+.about{
+  background-color:#0b2740;
+  color: white;
+  padding: 30px;
+  font-size: x-large;
+  box-shadow: 0 0 20px;
+
+}
+
+.about h2{
+  text-shadow: 10px 10px 5px;
+}
+
+/* Projects */
+
+.Projects {
+  background-color: #082238;
+  color: white;
+  font-size: x-large;
+  padding: 30px;
+  box-shadow: 0 0 20px;
+  
+  
+}
+
+.Projects h2 {
+  padding: 10px;
+  margin: 5px;
+  text-decoration: underline;
+}
+
+.Projects2 h3{
+  text-shadow: 0 0 10px;
+  padding: 10px;
+  margin: 10px;
+
+}
+.Projects2 p {
+  padding: 5px;
+  margin: 10px;
+}
+
+
+/* Suggestions */
+.suggestions {
+  background-color: #061c30;
+  color: white;
+  font-size: x-large;
+  padding: 20px;
+  box-shadow: 0 0 20px;
+}
+
+.suggestions h2 {
+  padding: 20px;
+  margin: 2px;
+   text-decoration: underline;
+}
+
+.E {
+  font-size: x-large;
+  padding: 5px;
+  margin: 5px;
+}
+
+.S {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: x-large;
+  padding: 5px;
+  margin: 5px;
+}
+
+
+/* footer */
+
+.footer {
+  display: grid;
+}
+
+.footer__logo {
+  grid-column: 1;
+  grid-row: 1;
+
+  width: 100%;
+  height: 720px;
+  display: block;
+}
+
+.footer__links {
+  grid-column: 1;
+  grid-row: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  align-self: start;
+  justify-self: start;
+
+  margin-left: 40.5%;
+  margin-top: 7%;
+}
+
+.footer__links a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: x-large;
+  margin: 2px;
+}
+
+.footer__links a::after {
+  content: "";
+  position: absolute;
+
+  left: 0;
+  bottom: -3px;
+
+  width: 0;
+  height: 2px;
+
+  background-color: white;
+
+  transition: width 0.4s ease;
+}
+
+.footer__links a:hover::after {
+  width: 100%;
+}
+
+
+
+/* Images */
+.BIL img{
+  color: white;
+  height: 500px;
+  width: 100%;
+  box-shadow: 0 0 20px;
+}
+
+.Projects img{
+  color: white;
+  height: 500px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px;
+
+}
+
+
+.start img{
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px;
+}
+
+.about img {
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px;
+}
+
+
+
+
+/** Mobile device friendly */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+  
+  .home__description, .home__img--wrapper {
+    width: 100%;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .home__description {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 60px;
+  }
+
+  .subheader {
+    text-align: center;
+    font-size: 28px;
+  }
+
+  .section__description {
+    flex-direction: column;
+  }
+
+  .section__description--wrapper,
+  .about__img--wrapper {
+    width: 100%;
+  }
+
+  #Projects .section__description {
+    flex-direction: column-reverse;
+  }
+
+  form {
+    padding: 0 24px;
+  }
+
+  footer {
+    padding: 48px 24px;
+  }
+
+  .footer__logo {
+    max-width: 400px;
+  }
+
+  .footer__link {
+    padding: 0 8px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer__logo {
+    max-width: 320px;
+  }
+
+  .footer__link {
+    font-size: 16px;
+  }
+}
